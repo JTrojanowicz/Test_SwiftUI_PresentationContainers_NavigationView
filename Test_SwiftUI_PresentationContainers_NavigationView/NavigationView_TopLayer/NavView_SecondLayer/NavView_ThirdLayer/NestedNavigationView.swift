@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SeventhNestedView: View {
+struct NestedNavigationView: View {
     @EnvironmentObject var user: User
     var body: some View {
         VStack {

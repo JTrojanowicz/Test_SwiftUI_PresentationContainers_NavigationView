@@ -13,7 +13,7 @@
 		EF4568ED288817DC008F0C00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4568EC288817DC008F0C00 /* Preview Assets.xcassets */; };
 		EF4568FC28881928008F0C00 /* SeventhView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568F628881928008F0C00 /* SeventhView.swift */; };
 		EF4568FD28881928008F0C00 /* EighthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568F728881928008F0C00 /* EighthView.swift */; };
-		EF4568FE28881928008F0C00 /* SeventhNestedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568F828881928008F0C00 /* SeventhNestedView.swift */; };
+		EF4568FE28881928008F0C00 /* NestedNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568F828881928008F0C00 /* NestedNavigationView.swift */; };
 		EF4568FF28881928008F0C00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568FA28881928008F0C00 /* User.swift */; };
 		EF45690028881928008F0C00 /* NavigationView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4568FB28881928008F0C00 /* NavigationView1.swift */; };
 		EF45690528881950008F0C00 /* ModalsPopoversOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45690228881950008F0C00 /* ModalsPopoversOthers.swift */; };
@@ -31,7 +31,7 @@
 		EF4568EC288817DC008F0C00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF4568F628881928008F0C00 /* SeventhView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhView.swift; sourceTree = "<group>"; };
 		EF4568F728881928008F0C00 /* EighthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EighthView.swift; sourceTree = "<group>"; };
-		EF4568F828881928008F0C00 /* SeventhNestedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhNestedView.swift; sourceTree = "<group>"; };
+		EF4568F828881928008F0C00 /* NestedNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedNavigationView.swift; sourceTree = "<group>"; };
 		EF4568FA28881928008F0C00 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EF4568FB28881928008F0C00 /* NavigationView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView1.swift; sourceTree = "<group>"; };
 		EF45690228881950008F0C00 /* ModalsPopoversOthers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalsPopoversOthers.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				EF4568E5288817DB008F0C00 /* Test_SwiftUI_PresentationContainers_NavigationViewApp.swift */,
 				EF45690B28881A75008F0C00 /* Model */,
 				EF4568E7288817DB008F0C00 /* ContentView.swift */,
-				EF4568F528881928008F0C00 /* NavigationView1 */,
+				EF4568F528881928008F0C00 /* NavigationView_TopLayer */,
 				EF45690128881950008F0C00 /* ModalsPopoversOthers */,
 				EF4569082888195E008F0C00 /* SplitView */,
 				EF4568E9288817DC008F0C00 /* Assets.xcassets */,
@@ -91,24 +91,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EF4568F528881928008F0C00 /* NavigationView1 */ = {
+		EF4568F528881928008F0C00 /* NavigationView_TopLayer */ = {
 			isa = PBXGroup;
 			children = (
-				EF4568F628881928008F0C00 /* SeventhView.swift */,
-				EF4568F728881928008F0C00 /* EighthView.swift */,
-				EF4568F828881928008F0C00 /* SeventhNestedView.swift */,
-				EF4568F928881928008F0C00 /* Model */,
 				EF4568FB28881928008F0C00 /* NavigationView1.swift */,
+				EFBD713728894845006CD31C /* NavView_SecondLayer */,
 			);
-			path = NavigationView1;
-			sourceTree = "<group>";
-		};
-		EF4568F928881928008F0C00 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EF4568FA28881928008F0C00 /* User.swift */,
-			);
-			path = Model;
+			path = NavigationView_TopLayer;
 			sourceTree = "<group>";
 		};
 		EF45690128881950008F0C00 /* ModalsPopoversOthers */ = {
@@ -133,8 +122,27 @@
 			isa = PBXGroup;
 			children = (
 				EF45690C28881A75008F0C00 /* TabController.swift */,
+				EF4568FA28881928008F0C00 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EFBD713728894845006CD31C /* NavView_SecondLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF4568F628881928008F0C00 /* SeventhView.swift */,
+				EF4568F728881928008F0C00 /* EighthView.swift */,
+				EFBD713828894863006CD31C /* NavView_ThirdLayer */,
+			);
+			path = NavView_SecondLayer;
+			sourceTree = "<group>";
+		};
+		EFBD713828894863006CD31C /* NavView_ThirdLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF4568F828881928008F0C00 /* NestedNavigationView.swift */,
+			);
+			path = NavView_ThirdLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +220,7 @@
 				EF45690628881950008F0C00 /* ActionSheet.swift in Sources */,
 				EF45690728881950008F0C00 /* SheetView.swift in Sources */,
 				EF45690A2888195E008F0C00 /* SplitView.swift in Sources */,
-				EF4568FE28881928008F0C00 /* SeventhNestedView.swift in Sources */,
+				EF4568FE28881928008F0C00 /* NestedNavigationView.swift in Sources */,
 				EF4568FC28881928008F0C00 /* SeventhView.swift in Sources */,
 				EF4568FF28881928008F0C00 /* User.swift in Sources */,
 				EF4568E8288817DB008F0C00 /* ContentView.swift in Sources */,

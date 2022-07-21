@@ -74,7 +74,7 @@ struct NavigationView1: View {
                     HStack {
                         Text("Score: \(user.score)")
                         NavigationLink(destination: SeventhView(), isActive: $user.isShowingDetails) {
-                            Text("Go to 7th view")
+                            Text("Go to seventh view")
                         }
                         //                    .environmentObject(user) // WRONG! .environmentObject modifier needs to be outside NavigationView
                     }

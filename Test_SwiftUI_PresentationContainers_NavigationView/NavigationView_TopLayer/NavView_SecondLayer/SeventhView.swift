@@ -11,6 +11,9 @@ struct SeventhView: View {
     @EnvironmentObject var user: User
     @State private var isBackButtonHidden = false
     var body: some View {
+        
+        //NOTICE: We do not write NavigationView again in the nested view!!!!
+        
         VStack {
             Text("Score: \(user.score)")
             
@@ -27,8 +30,8 @@ struct SeventhView: View {
                 user.isShowingDetails = false
             }
             
-            NavigationLink(destination: SeventhNestedView()) {
-                Text("Go to 7th nested view")
+            NavigationLink(destination: NestedNavigationView()) {
+                Text("Go to NESTED navigation view")
             }
             .padding()
         }
@@ -42,7 +45,7 @@ struct SeventhView_preview: PreviewProvider {
         Group {
             SeventhView()
                 .previewLayout(PreviewLayout.sizeThatFits)
-                .previewInterfaceOrientation(.landscapeLeft)
+//                .previewInterfaceOrientation(.landscapeLeft)
                 .padding()
                 .previewDisplayName("Default preview")
                 .environment(\.horizontalSizeClass, .compact)
